@@ -15,7 +15,7 @@ C:/UnityTutorial/Zombie Shooter 3D/Zombie-Shooter-3D/Zombie Shooter 3D
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-59002
+63253
 Successfully changed project path to: C:/UnityTutorial/Zombie Shooter 3D/Zombie-Shooter-3D/Zombie Shooter 3D
 C:/UnityTutorial/Zombie Shooter 3D/Zombie-Shooter-3D/Zombie Shooter 3D
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ C:/UnityTutorial/Zombie Shooter 3D/Zombie-Shooter-3D/Zombie Shooter 3D
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [11020] Host "[IP] 192.168.1.6 [Port] 0 [Flags] 2 [Guid] 2081335699 [EditorId] 2081335699 [Version] 1048832 [Id] WindowsEditor(7,Tanishq) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [10384] Host "[IP] 192.168.18.236 [Port] 0 [Flags] 2 [Guid] 2171112786 [EditorId] 2171112786 [Version] 1048832 [Id] WindowsEditor(7,Tanishq) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [11020] Host "[IP] 192.168.1.6 [Port] 0 [Flags] 2 [Guid] 2081335699 [EditorId] 2081335699 [Version] 1048832 [Id] WindowsEditor(7,Tanishq) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [10384] Host "[IP] 192.168.18.236 [Port] 0 [Flags] 2 [Guid] 2171112786 [EditorId] 2171112786 [Version] 1048832 [Id] WindowsEditor(7,Tanishq) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 124.60 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 80.40 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.15f1 (e8e88683f834)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.15f1/Editor/Data/Resources/UnitySubsystems
@@ -67,76 +67,76 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.15f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.15f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.15f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56816
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56452
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.15f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004544 seconds.
+Registered in 0.004384 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 90.75 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 75.10 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.645 seconds
+- Completed reload, in  0.548 seconds
 Domain Reload Profiling:
-	ReloadAssembly (645ms)
-		BeginReloadAssembly (72ms)
+	ReloadAssembly (548ms)
+		BeginReloadAssembly (62ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (464ms)
-			LoadAssemblies (70ms)
+		EndReloadAssembly (392ms)
+			LoadAssemblies (60ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (110ms)
+			SetupTypeCache (89ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (29ms)
-			SetupLoadedEditorAssemblies (271ms)
+			RebuildScriptCaches (25ms)
+			SetupLoadedEditorAssemblies (231ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
+				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (91ms)
+				RefreshPlugins (75ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (126ms)
-				ProcessInitializeOnLoadMethodAttributes (46ms)
+				ProcessInitializeOnLoadAttributes (108ms)
+				ProcessInitializeOnLoadMethodAttributes (40ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.005923 seconds.
+Registered in 0.005491 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image C:\UnityTutorial\Zombie Shooter 3D\Zombie-Shooter-3D\Zombie Shooter 3D\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image C:\UnityTutorial\Zombie Shooter 3D\Zombie-Shooter-3D\Zombie Shooter 3D\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.57 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.54 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.077 seconds
+- Completed reload, in  0.955 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1078ms)
+	ReloadAssembly (956ms)
 		BeginReloadAssembly (99ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (17ms)
-		EndReloadAssembly (848ms)
-			LoadAssemblies (74ms)
+		EndReloadAssembly (747ms)
+			LoadAssemblies (77ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (274ms)
+			SetupTypeCache (248ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (54ms)
-			SetupLoadedEditorAssemblies (385ms)
+			RebuildScriptCaches (48ms)
+			SetupLoadedEditorAssemblies (340ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
-				SetLoadedEditorAssemblies (1ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (97ms)
-				ProcessInitializeOnLoadAttributes (244ms)
-				ProcessInitializeOnLoadMethodAttributes (30ms)
-				AfterProcessingInitializeOnLoad (7ms)
+				BeforeProcessingInitializeOnLoad (84ms)
+				ProcessInitializeOnLoadAttributes (220ms)
+				ProcessInitializeOnLoadMethodAttributes (24ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (5ms)
@@ -144,12 +144,12 @@ Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.64 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.53 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3362 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 27 unused Assets / (113.9 KB). Loaded Objects now: 3833.
-Memory consumption went from 127.6 MB to 127.5 MB.
-Total: 3.507400 ms (FindLiveObjects: 0.278400 ms CreateObjectMapping: 0.238300 ms MarkObjects: 2.873700 ms  DeleteObjects: 0.116000 ms)
+Memory consumption went from 127.7 MB to 127.6 MB.
+Total: 2.935400 ms (FindLiveObjects: 0.261300 ms CreateObjectMapping: 0.239800 ms MarkObjects: 2.304300 ms  DeleteObjects: 0.129300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -163,145 +163,7 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 90074.823443 seconds.
-  path: Assets/Steve.zip
-  artifactKey: Guid(520682eaa1a95a94a97e3f0df412e5e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Steve.zip using Guid(520682eaa1a95a94a97e3f0df412e5e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12fa3078b7c407f97760c8a27bc4a8ba') in 0.034296 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 21.859817 seconds.
-  path: Assets/Steve.unitypackage
-  artifactKey: Guid(c9e56e7cd011f714ba1d3ff1c07fccb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Steve.unitypackage using Guid(c9e56e7cd011f714ba1d3ff1c07fccb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60aa10b51ae2572c9e560d05c5f6818c') in 0.025807 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 13.495850 seconds.
-  path: Assets/Steve
-  artifactKey: Guid(a0ec3e4504f154424aa203e692a3f713) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Steve using Guid(a0ec3e4504f154424aa203e692a3f713) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da185ce90a951aadfc4218bee25a0568') in 0.001849 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2.484031 seconds.
-  path: Assets/Steve/Gloves.mat
-  artifactKey: Guid(150bc45463ecf4d9b841c7664e59b293) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Steve/Gloves.mat using Guid(150bc45463ecf4d9b841c7664e59b293) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f282b9054315f32c00dc241732e3dcfa') in 0.385068 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Steve/Top.mat
-  artifactKey: Guid(4daee89d4a76f401d8a6d0f0c37a2478) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Steve/Top.mat using Guid(4daee89d4a76f401d8a6d0f0c37a2478) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37143be9861a819f225b1b75a02b1d09') in 0.020120 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/Steve/Steve_FPCharacter.prefab
-  artifactKey: Guid(c356d39725bcc4ec0925ab50a3cf6a42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Steve/Steve_FPCharacter.prefab using Guid(c356d39725bcc4ec0925ab50a3cf6a42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5e7769f38c15c6051b76a29e439cf0e') in 0.309417 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 17.149115 seconds.
-  path: Assets/Steve/Textures/Body_Gloss.png
-  artifactKey: Guid(ec72f3c092d324ced86e18d079494e1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Steve/Textures/Body_Gloss.png using Guid(ec72f3c092d324ced86e18d079494e1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '033c1dcf441e5f5b2a29e1c487104ee1') in 0.027712 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Steve/Textures/Top_Opacity.png
-  artifactKey: Guid(8029b313c9fb4452bac9885ae0a0adc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Steve/Textures/Top_Opacity.png using Guid(8029b313c9fb4452bac9885ae0a0adc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6803b445158a8852a5e27548e3b5793f') in 0.011230 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Steve/Textures/Glove_Opacity.png
-  artifactKey: Guid(b39deb0c0049242998828e3b2e5d9f3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Steve/Textures/Glove_Opacity.png using Guid(b39deb0c0049242998828e3b2e5d9f3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4e5847d4d124e0e60b86d2f9416b19f') in 0.012033 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Steve/Textures/Glove_Gloss.png
-  artifactKey: Guid(5a295e738a2554abbacff7852cd6e52c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Steve/Textures/Glove_Gloss.png using Guid(5a295e738a2554abbacff7852cd6e52c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cbc942a4499b338ebd3d16fc7e5dc559') in 0.012139 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Steve/Textures/Top_Specular.png
-  artifactKey: Guid(213d370a9cfa44b87a2ea578c9cc35ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Steve/Textures/Top_Specular.png using Guid(213d370a9cfa44b87a2ea578c9cc35ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4de2962b1a9e9cd482fb6b83c06ca53') in 0.017744 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Steve/Textures/Glove_Specular.png
-  artifactKey: Guid(600bc41daf2094a6a817d56eaad7a8ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Steve/Textures/Glove_Specular.png using Guid(600bc41daf2094a6a817d56eaad7a8ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24b8d3cbc1b92d5007d96347f6972c65') in 0.015544 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.667808 seconds.
-  path: Assets/Steve/Audio/Footstep02.wav
-  artifactKey: Guid(53dcb87c0d58147c6a32f226285470b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Steve/Audio/Footstep02.wav using Guid(53dcb87c0d58147c6a32f226285470b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19c496b16e4084e6bb0b88bcca08731e') in 0.059633 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Steve/Audio/Jump.wav
-  artifactKey: Guid(286d21c70c6da45ca8f00254cd221c81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Steve/Audio/Jump.wav using Guid(286d21c70c6da45ca8f00254cd221c81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5f25f0fb833d5f1c41856f5ea59a191b') in 0.013689 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 1.602298 seconds.
-  path: Assets/Steve/Animations/Sources/FuseModel@Firing Rifle-3.fbx
-  artifactKey: Guid(5c24ccdb9d2ff4f8597f6475ef0b80ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Steve/Animations/Sources/FuseModel@Firing Rifle-3.fbx using Guid(5c24ccdb9d2ff4f8597f6475ef0b80ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e419a015512ed8c49a5e9660ecc3e61') in 0.011775 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Steve/Animations/Sources/FuseModel@Rifle Aiming Idle.fbx
-  artifactKey: Guid(5e157699ba193400aa2f35c8782c7a41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Steve/Animations/Sources/FuseModel@Rifle Aiming Idle.fbx using Guid(5e157699ba193400aa2f35c8782c7a41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a47420a7ea9f8ef5e7c88503d1cda080') in 0.011630 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Steve/Animations/Sources/FuseModel@Reload.fbx
-  artifactKey: Guid(1cd7baf9b610746848b8c43f5346fcb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Steve/Animations/Sources/FuseModel@Reload.fbx using Guid(1cd7baf9b610746848b8c43f5346fcb4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b20e9c7bc5e5a16a811f6645d03b93cd') in 0.011551 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/Steve/Animations/Sources/FuseModel@Rifle Punch.fbx
-  artifactKey: Guid(fdf9ad0f491924de382ec0169949c5c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Steve/Animations/Sources/FuseModel@Rifle Punch.fbx using Guid(fdf9ad0f491924de382ec0169949c5c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd389eebb3d54957a0ceec86e0cd24580') in 0.335085 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Steve/Animations/Sources/FuseModel@Rifle Idle 1.fbx
-  artifactKey: Guid(b33e6da44ee8b4ef59c0e77b32c8e82f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Steve/Animations/Sources/FuseModel@Rifle Idle 1.fbx using Guid(b33e6da44ee8b4ef59c0e77b32c8e82f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9ccee8f4afacc4603f25e40281a181f') in 0.055532 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000052 seconds.
-  path: Assets/Steve/Animations/Sources/FuseModel@Reloading.fbx
-  artifactKey: Guid(30d79ad52cff64ce2a9e3eb6fbf0efef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Steve/Animations/Sources/FuseModel@Reloading.fbx using Guid(30d79ad52cff64ce2a9e3eb6fbf0efef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86d3b87ab4f9f62b00a8d6f59502dbce') in 0.019361 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000054 seconds.
-  path: Assets/Steve/Animations/Sources/FuseModel@Rifle Run 2.fbx
-  artifactKey: Guid(03863b27708984ef68d0ca8e800373ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Steve/Animations/Sources/FuseModel@Rifle Run 2.fbx using Guid(03863b27708984ef68d0ca8e800373ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0106ea3df0cc551ce39dbf1219cac6a5') in 0.018868 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/Steve/Animations/Sources/FuseModel@Punching-2.fbx
-  artifactKey: Guid(2ad86b3c6c56a4cdfb9168670992b418) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Steve/Animations/Sources/FuseModel@Punching-2.fbx using Guid(2ad86b3c6c56a4cdfb9168670992b418) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be3765516e42bf233410abd6697ba825') in 0.015036 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Steve/Animations/Sources/FuseModel@Grab Rifle From Behind Shoulder.fbx
-  artifactKey: Guid(3adc362a77e2c46b1a7f813bdb48d3ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Steve/Animations/Sources/FuseModel@Grab Rifle From Behind Shoulder.fbx using Guid(3adc362a77e2c46b1a7f813bdb48d3ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46052c34585205f39bcec0e53e628379') in 0.140067 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 43.479258 seconds.
-  path: Assets/Steve/Weapon/Terraformer_Weapon_Container_Material.mat
-  artifactKey: Guid(aa90753be61c94c50892a86e9a938431) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Steve/Weapon/Terraformer_Weapon_Container_Material.mat using Guid(aa90753be61c94c50892a86e9a938431) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '809e52ad0eb9b64d8546731d0c3cbf2b') in 0.332185 seconds 
+  Time since last request: 95933.787061 seconds.
+  path: Assets/Steve/FPS.controller
+  artifactKey: Guid(7ca3956566f0f4a4b96a19b71c565552) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Steve/FPS.controller using Guid(7ca3956566f0f4a4b96a19b71c565552) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cff0a928a92de33dc6d34fe412bae93') in 0.054923 seconds 
