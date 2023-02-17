@@ -39,11 +39,11 @@ public class FPSController : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0))
         {
-            anim.SetBool("fire", true);
+            anim.SetTrigger("fire");
         }
-        else if (Input.GetMouseButtonUp(0))
+        if (Input.GetKeyDown(KeyCode.R))
         {
-            anim.SetBool("fire", false);
+            anim.SetTrigger("reload");
         }
     }
 
