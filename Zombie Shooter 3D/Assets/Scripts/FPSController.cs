@@ -6,12 +6,16 @@ public class FPSController : MonoBehaviour
 {
     public GameObject cam;
     public Animator anim;
+    //public AudioSource shot;
+
     float speed = 0.1f;
     float Xsensitivity = 4f;
     float Ysensitivity = 4f;
     float MinimumX = -90;
     float MaximumX = 90;
+
     Rigidbody rb;
+
     CapsuleCollider capsule;
 
     Quaternion cameraRot;
@@ -40,11 +44,13 @@ public class FPSController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             anim.SetTrigger("fire");
+            //shot.Play();
         }
         if (Input.GetKeyDown(KeyCode.R))
         {
             anim.SetTrigger("reload");
         }
+        
     }
 
     void FixedUpdate()
@@ -69,10 +75,20 @@ public class FPSController : MonoBehaviour
         float x = Input.GetAxis("Horizontal") * speed;
         float z = Input.GetAxis("Vertical") * speed;
 
-        transform.position += //Vector3.Scale(cam.transform.forward * z, new Vector3(1, 0, 1) + Vector3.left * x);
-                              cam.transform.forward * z + cam.transform.right * x;
-                              //new Vector3(x*speed, 0, z*speed);
+        //walking 
+        if (Mathf.Abs(x) > 0 || Mathf.Abs(z) > 0)
+        {
+            if(!anim.GetBool("walking")){
+                anim.SetBool("walking", true);
+            }        
+        }
+        else if(anim.GetBool("walking"))
+        {
+            anim.SetBool("walking", false);
+        }
 
+        transform.position += cam.transform.forward * z + cam.transform.right * x;
+            
         UpdateCursorLock();
     }
 
