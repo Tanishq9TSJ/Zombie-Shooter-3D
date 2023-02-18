@@ -12,6 +12,7 @@ public class FPSController : MonoBehaviour
     public AudioSource healthPickup;
     public AudioSource triggerSound;
     public AudioSource death;
+    public AudioSource reload;
 
     float speed = 0.1f;
     float Xsensitivity = 4f;
@@ -28,12 +29,16 @@ public class FPSController : MonoBehaviour
 
     bool cursorIsLocked = true;
     bool lockCursor = true;
+    bool playingWalking = false;
+    bool previouslyGrounded = true; 
 
     //Inventory
     int ammo = 0;
     int maxAmmo = 40;
     int health = 10;
     int maxHealth = 100;
+    int ammoClip = 0;
+    int ammoClipMax = 10;
 
 
     // Start is called before the first frame update
@@ -58,10 +63,10 @@ public class FPSController : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0) && !anim.GetBool("fire"))
         {
-            if(ammo > 0){
+            if(ammoClip > 0){
                 anim.SetTrigger("fire");
-                ammo--;
-                Debug.Log("Ammo left: " +ammo);
+                ammoClip--;
+                Debug.Log("Ammo left in Clip: " +ammoClip);
             }
             else if(anim.GetBool("arm")){
                 triggerSound.Play();
@@ -69,9 +74,16 @@ public class FPSController : MonoBehaviour
             
             //shot.Play();
         }
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R) && anim.GetBool("arm"))
         {
             anim.SetTrigger("reload");
+            reload.Play();
+            int amountNeed = ammoClipMax - ammoClip;
+            int ammoAvailable = amountNeed < ammo ? amountNeed : ammo;
+            ammo -= ammoAvailable;
+            ammoClip += ammoAvailable; 
+            Debug.Log("Ammo Left: " + ammo);
+            Debug.Log("Ammo in Clip: " + ammoClip);
         }
         
     }
@@ -92,16 +104,23 @@ public class FPSController : MonoBehaviour
         cam.transform.localRotation = cameraRot;
 
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded()) 
+        bool grounded = isGrounded();
+        if (Input.GetKeyDown(KeyCode.Space) && grounded) 
         {
             rb.AddForce(0, 300f, 0);
             audioSource.PlayOneShot(audioClips[4]);
             if(anim.GetBool("walking"))
             {
                 CancelInvoke("PlayFootStepAudio");
+                playingWalking = false;
             }
         }
+        else if( !previouslyGrounded && grounded)
+        {
+            audioSource.PlayOneShot(audioClips[5]);
+        }
 
+        previouslyGrounded = grounded;
         float x = Input.GetAxis("Horizontal") * speed;
         float z = Input.GetAxis("Vertical") * speed;
 
@@ -117,6 +136,7 @@ public class FPSController : MonoBehaviour
         {
             anim.SetBool("walking", false);
             CancelInvoke("PlayFootStepAudio");
+            playingWalking = false;
         }
 
         transform.position += cam.transform.forward * z + cam.transform.right * x;
@@ -173,6 +193,7 @@ public class FPSController : MonoBehaviour
         }
         if(isGrounded())
         {
+            
             audioSource.PlayOneShot(audioClips[5]);
         }
         /*if(anim.GetBool("walking"))
@@ -191,8 +212,13 @@ public class FPSController : MonoBehaviour
 
     void PlayFootStepAudio()
     {
-        AudioClip footsteps = audioClips[Random.Range(0, 3)];
-        audioSource.PlayOneShot(footsteps);
+        if(anim.GetBool("walking") && !playingWalking)
+        {
+            AudioClip footsteps = audioClips[Random.Range(0, 3)];
+            audioSource.PlayOneShot(footsteps);
+            playingWalking = true;
+        }
+        
     }
      /*void PlayFootStepAudio()
     {
