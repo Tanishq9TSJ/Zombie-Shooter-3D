@@ -10,6 +10,8 @@ public class FPSController : MonoBehaviour
     public AudioSource audioSource;
     public AudioSource ammoPickup;
     public AudioSource healthPickup;
+    public AudioSource triggerSound;
+    public AudioSource death;
 
     float speed = 0.1f;
     float Xsensitivity = 4f;
@@ -27,6 +29,13 @@ public class FPSController : MonoBehaviour
     bool cursorIsLocked = true;
     bool lockCursor = true;
 
+    //Inventory
+    int ammo = 0;
+    int maxAmmo = 40;
+    int health = 10;
+    int maxHealth = 100;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +45,8 @@ public class FPSController : MonoBehaviour
 
         cameraRot = cam.transform.localRotation;
         characterRot = this.transform.localRotation;
+
+        health = maxHealth;
     }
 
     // Update is called once per frame
@@ -45,9 +56,17 @@ public class FPSController : MonoBehaviour
         {
             anim.SetBool("arm", !anim.GetBool("arm"));
         }
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !anim.GetBool("fire"))
         {
-            anim.SetTrigger("fire");
+            if(ammo > 0){
+                anim.SetTrigger("fire");
+                ammo--;
+                Debug.Log("Ammo left: " +ammo);
+            }
+            else if(anim.GetBool("arm")){
+                triggerSound.Play();
+            }
+            
             //shot.Play();
         }
         if (Input.GetKeyDown(KeyCode.R))
@@ -131,15 +150,26 @@ public class FPSController : MonoBehaviour
     }
 
      void OnCollisionEnter(Collision collision) {
-        if(collision.gameObject.tag == "Ammo"){
-            Debug.Log("Ammo");
+        if(collision.gameObject.tag == "Ammo" && ammo < maxAmmo){
+            ammo = Mathf.Clamp(ammo + 10, 0, maxAmmo );
+            Debug.Log("Ammo" + ammo);
             Destroy(collision.gameObject);
             ammoPickup.Play();
         }
-        if(collision.gameObject.tag == "MedKit"){
-            Debug.Log("Medkit");
+        if(collision.gameObject.tag == "MedKit" && health < maxHealth){
+            health = Mathf.Clamp(health + 20, 0, maxHealth );
+            Debug.Log("Medkit" + health);
             Destroy(collision.gameObject);
             healthPickup.Play();
+        }
+        else if(collision.gameObject.tag  == "lava")
+        {
+            health = Mathf.Clamp(health - 25, 0, maxHealth );;
+            Debug.Log("Health level: " + health);
+            if(health <= 0)
+            {
+                death.Play();
+            }
         }
         if(isGrounded())
         {
