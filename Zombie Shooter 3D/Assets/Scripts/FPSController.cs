@@ -6,7 +6,8 @@ public class FPSController : MonoBehaviour
 {
     public GameObject cam;
     public Animator anim;
-    //public AudioSource shot;
+    public AudioClip[] audioClips;
+    public AudioSource audioSource;
 
     float speed = 0.1f;
     float Xsensitivity = 4f;
@@ -29,6 +30,7 @@ public class FPSController : MonoBehaviour
     {
         rb = this.GetComponent<Rigidbody>();
         capsule = this.GetComponent<CapsuleCollider>();
+        audioSource = this.GetComponent<AudioSource>();
 
         cameraRot = cam.transform.localRotation;
         characterRot = this.transform.localRotation;
@@ -53,6 +55,8 @@ public class FPSController : MonoBehaviour
         
     }
 
+   
+
     void FixedUpdate()
     {
         float yRot = Input.GetAxis("Mouse X") * Ysensitivity;
@@ -67,9 +71,14 @@ public class FPSController : MonoBehaviour
         cam.transform.localRotation = cameraRot;
 
 
-        if (Input.GetKeyDown(KeyCode.Space)) 
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded()) 
         {
             rb.AddForce(0, 300f, 0);
+            audioSource.PlayOneShot(audioClips[4]);
+            if(anim.GetBool("walking"))
+            {
+                CancelInvoke("PlayFootStepAudio");
+            }
         }
 
         float x = Input.GetAxis("Horizontal") * speed;
@@ -80,11 +89,13 @@ public class FPSController : MonoBehaviour
         {
             if(!anim.GetBool("walking")){
                 anim.SetBool("walking", true);
+                InvokeRepeating("PlayFootStepAudio", 0, 0.4f);
             }        
         }
         else if(anim.GetBool("walking"))
         {
             anim.SetBool("walking", false);
+            CancelInvoke("PlayFootStepAudio");
         }
 
         transform.position += cam.transform.forward * z + cam.transform.right * x;
@@ -117,6 +128,17 @@ public class FPSController : MonoBehaviour
         return false;
     }
 
+     void OnCollisionEnter(Collision collision) {
+        if(isGrounded())
+        {
+            audioSource.PlayOneShot(audioClips[5]);
+        }
+        /*if(anim.GetBool("walking"))
+        {
+            InvokeRepeating()
+        }*/
+    }
+
     public void UpdateCursorLock()
     {
         if (lockCursor)
@@ -124,6 +146,22 @@ public class FPSController : MonoBehaviour
             InternalLockUpdate();
         }
     }
+
+    void PlayFootStepAudio()
+    {
+        AudioClip footsteps = audioClips[Random.Range(0, 3)];
+        audioSource.PlayOneShot(footsteps);
+    }
+     /*void PlayFootStepAudio()
+    {
+        AudioSource audiosource = new AudioSource();
+        int n = Random.Range(1, footsteps.Length);
+
+        audiosource = footsteps[n];
+        audiosource.Play();
+        footsteps[n] = footsteps[0];
+        footsteps[0] = audiosource;
+    }*/
 
     public void InternalLockUpdate()
     {
