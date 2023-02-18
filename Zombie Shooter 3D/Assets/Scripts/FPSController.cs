@@ -8,6 +8,8 @@ public class FPSController : MonoBehaviour
     public Animator anim;
     public AudioClip[] audioClips;
     public AudioSource audioSource;
+    public AudioSource ammoPickup;
+    public AudioSource healthPickup;
 
     float speed = 0.1f;
     float Xsensitivity = 4f;
@@ -129,6 +131,16 @@ public class FPSController : MonoBehaviour
     }
 
      void OnCollisionEnter(Collision collision) {
+        if(collision.gameObject.tag == "Ammo"){
+            Debug.Log("Ammo");
+            Destroy(collision.gameObject);
+            ammoPickup.Play();
+        }
+        if(collision.gameObject.tag == "MedKit"){
+            Debug.Log("Medkit");
+            Destroy(collision.gameObject);
+            healthPickup.Play();
+        }
         if(isGrounded())
         {
             audioSource.PlayOneShot(audioClips[5]);
